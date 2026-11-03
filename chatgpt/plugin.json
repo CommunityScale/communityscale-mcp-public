@@ -1,0 +1,109 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "author": {
+    "name": "CommunityScale",
+    "url": "https://communityscale.com"
+  },
+  "description": "US housing data, forecasts and a data dictionary for municipalities and counties.",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "capabilities": [],
+        "category": "Research",
+        "composerIcon": "./assets/logo.png",
+        "defaultPrompt": [
+          "How many homes does Worcester, Massachusetts need to add, and what drives that number?",
+          "How have home prices and required income changed in Union County, NC since 2015?",
+          "Which five large US counties have the highest share of renter households?"
+        ],
+        "developerName": "CommunityScale",
+        "displayName": "CommunityScale",
+        "logo": "./assets/logo.png",
+        "longDescription": "CommunityScale connects ChatGPT to the housing data behind our community dashboards, so you can ask about any US municipality or county and get figures with their sources.\n\nAsk about housing supply targets, cost burden by income group, affordability, income thresholds and population forecasts. Explore trends in home prices, income, wages, inflation, population and building permits. Run rankings and custom questions over Census tables, down to block groups. Read the published dashboard report for a place.\n\nA data dictionary is built in: search for the datasets we hold on a topic, see how current each one is, and read the definition and unit of every variable.\n\nThe connection is read-only. It needs a CommunityScale account, and it never changes your data or ours.",
+        "privacyPolicyURL": "https://communityscale.com/privacy-policy/",
+        "shortDescription": "US housing data by place",
+        "supportURL": "https://communityscale.com/contact/",
+        "termsOfServiceURL": "https://communityscale.com/terms-of-service/",
+        "websiteURL": "https://docs.communityscale.io/docs/mcp"
+      },
+      "onboardingSkill": "./skills/get-started/SKILL.md",
+      "publication": {
+        "countries": [
+          "US"
+        ],
+        "release_notes": "First release: read-only US housing data, forecasts, dashboard reports, Census tables and a data dictionary."
+      },
+      "review": {
+        "commerce": false,
+        "demo_recording_url": "__DEMO_RECORDING_URL__",
+        "test_cases": {
+          "negative": [
+            {
+              "description": "Unrelated request",
+              "prompt": "Write me a limerick about my cat."
+            },
+            {
+              "description": "Write action the plugin cannot perform",
+              "prompt": "Delete the Worcester dashboard from CommunityScale."
+            },
+            {
+              "description": "Private information about an individual",
+              "prompt": "What is the phone number of the owner of 12 Main Street in Worcester?"
+            }
+          ],
+          "positive": [
+            {
+              "description": "Housing supply target for a municipality",
+              "expected_behavior": "Resolves Worcester, MA to geoid 2502782000, then reports the total and annual housing supply needed through the target year and the components behind it: household growth, replacement, vacancy and substandard adjustments.",
+              "prompt": "How many homes does Worcester, Massachusetts need to add, and what drives that number?",
+              "tools_triggered": [
+                "findEntity",
+                "getForecast"
+              ]
+            },
+            {
+              "description": "Affordability trend for a county",
+              "expected_behavior": "Resolves Union County, NC to geoid 37179, queries the housing_affordability source grouped by calendar year from 2015, and reports the change in typical home price and required income, which rise from about $204,000 and $37,000 in 2015 to over $400,000 and $100,000 in recent years.",
+              "prompt": "How have typical home prices and the income needed to buy a home changed in Union County, North Carolina since 2015?",
+              "tools_triggered": [
+                "findEntity",
+                "dataSchema",
+                "exploreData"
+              ]
+            },
+            {
+              "description": "Find a dataset and define its variables",
+              "expected_behavior": "Finds the Census Building Permits Survey datasets in the data dictionary, says how current they are, explains the variables of bps_building_permits.annual_county using its definitions and units, and links the dictionary pages.",
+              "prompt": "What does CommunityScale have on building permits, how current is it, and what do the variables in the annual county dataset mean?",
+              "tools_triggered": [
+                "searchDataDictionary",
+                "describeDataset"
+              ]
+            },
+            {
+              "description": "National ranking over Census tables",
+              "expected_behavior": "Finds ACS table B25003 and ranks counties in one query joined to the place-name table. Among counties with at least 50,000 households in 2024, it reports Bronx County, NY (79.9%), New York County, NY (74.9%), Kings County, NY (70.5%), Hudson County, NJ (69.3%) and Suffolk County, MA (63.5%), and says how it read large.",
+              "prompt": "Which five large US counties have the highest share of renter households?",
+              "tools_triggered": [
+                "findLakeTables",
+                "queryLake"
+              ]
+            },
+            {
+              "description": "Published report",
+              "expected_behavior": "Resolves Rockland, ME to geoid 2301363590, summarizes its dashboard report and links its page on app.communityscale.io.",
+              "prompt": "Summarize CommunityScale's report for Rockland, Maine, and link to it.",
+              "tools_triggered": [
+                "findEntity",
+                "getReport"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  "homepage": "https://docs.communityscale.io/docs/mcp",
+  "name": "communityscale",
+  "version": "1.0.0"
+}

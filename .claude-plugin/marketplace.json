@@ -1,0 +1,14 @@
+{
+  "name": "communityscale",
+  "owner": {
+    "name": "CommunityScale",
+    "url": "https://communityscale.com"
+  },
+  "plugins": [
+    {
+      "name": "communityscale",
+      "source": "./plugin",
+      "description": "US housing data, forecasts and a data dictionary for municipalities and counties."
+    }
+  ]
+}

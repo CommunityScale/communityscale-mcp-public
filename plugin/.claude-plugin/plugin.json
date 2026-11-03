@@ -1,0 +1,25 @@
+{
+  "name": "communityscale",
+  "displayName": "CommunityScale",
+  "version": "1.0.0",
+  "description": "US housing data, forecasts and a data dictionary for municipalities and counties.",
+  "author": {
+    "name": "CommunityScale",
+    "url": "https://communityscale.com"
+  },
+  "homepage": "https://docs.communityscale.io/docs/mcp",
+  "repository": "https://github.com/CommunityScale/communityscale-mcp-public",
+  "license": "MIT",
+  "keywords": [
+    "housing",
+    "demographics",
+    "census",
+    "planning",
+    "data"
+  ],
+  "icon": "./assets/logo.png",
+  "documentationUrl": "https://docs.communityscale.io/docs/mcp",
+  "supportUrl": "https://communityscale.com/contact/",
+  "privacyPolicyUrl": "https://communityscale.com/privacy-policy/",
+  "termsOfServiceUrl": "https://communityscale.com/terms-of-service/"
+}

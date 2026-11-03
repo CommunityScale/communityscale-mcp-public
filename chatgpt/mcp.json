@@ -1,0 +1,19 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "communityscale": {
+      "extensions": {
+        "com.openai": {
+          "auth": {
+            "client": {
+              "mode": "dcr"
+            },
+            "type": "oauth"
+          }
+        }
+      },
+      "type": "streamable-http",
+      "url": "https://api.communityscale.io/mcp/v1"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "communityscale": {
+      "type": "http",
+      "url": "https://api.communityscale.io/mcp/v1"
+    }
+  }
+}
