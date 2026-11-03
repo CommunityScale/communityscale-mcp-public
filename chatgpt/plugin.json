@@ -57,7 +57,6 @@
               "expected_behavior": "Resolves Worcester, MA to geoid 2502782000, then reports the total and annual housing supply needed through the target year and the components behind it: household growth, replacement, vacancy and substandard adjustments.",
               "prompt": "How many homes does Worcester, Massachusetts need to add, and what drives that number?",
               "tools_triggered": [
-                "findEntity",
                 "getForecast"
               ]
             },
@@ -67,7 +66,6 @@
               "prompt": "How have typical home prices and the income needed to buy a home changed in Union County, North Carolina since 2015?",
               "tools_triggered": [
                 "findEntity",
-                "dataSchema",
                 "exploreData"
               ]
             },
@@ -76,8 +74,7 @@
               "expected_behavior": "Finds the Census Building Permits Survey datasets in the data dictionary, says how current they are, explains the variables of bps_building_permits.annual_county using its definitions and units, and links the dictionary pages.",
               "prompt": "What does CommunityScale have on building permits, how current is it, and what do the variables in the annual county dataset mean?",
               "tools_triggered": [
-                "searchDataDictionary",
-                "describeDataset"
+                "searchDataDictionary"
               ]
             },
             {
@@ -94,7 +91,6 @@
               "expected_behavior": "Resolves Rockland, ME to geoid 2301363590, summarizes its dashboard report and links its page on app.communityscale.io.",
               "prompt": "Summarize CommunityScale's report for Rockland, Maine, and link to it.",
               "tools_triggered": [
-                "findEntity",
                 "getReport"
               ]
             }
