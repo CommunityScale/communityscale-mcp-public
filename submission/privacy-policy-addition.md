@@ -1,6 +1,6 @@
 # Privacy policy addition (draft)
 
-Add to `https://communityscale.com/privacy-policy/`:
+Published on `https://communityscale.com/privacy-policy/` as section 12, AI Assistant Connections:
 
 ---
 
@@ -20,4 +20,4 @@ You can connect an AI assistant, such as Claude or ChatGPT, to CommunityScale da
 
 *Data the tools return.* The tools return published statistics and our analysis. Nothing you send through them changes that data.
 
-**Effective date:** [DATE]
+**Effective date:** November 3, 2026
