@@ -4,7 +4,7 @@ Submit at [claude.ai/directory/manage](https://claude.ai/directory/manage): **Su
 
 ## Before you start
 
-Connect GitHub on claude.ai. While this repository is private, the portal also needs the Claude GitHub App installed on it and your agreement to upload the source for scanning. The repository must be public before the listing goes live.
+Connect GitHub on claude.ai. The repository is public, so the portal can read it without the Claude GitHub App.
 
 ## 1. Source
 

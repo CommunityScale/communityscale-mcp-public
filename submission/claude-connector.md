@@ -47,7 +47,7 @@ The connection is read-only. It needs a CommunityScale account, and it never cha
 ## 6. Authentication
 
 - Authentication requirement: **Always required**
-- Authentication method: OAuth sign-in with dynamic client registration. No client ID or secret is entered
+- Authentication method: OAuth sign-in. Claude identifies itself with its client ID metadata document, and dynamic client registration also works, so no client ID or secret is entered
 
 ## 7. Data handling
 
