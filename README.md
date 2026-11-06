@@ -16,13 +16,11 @@ You need a CommunityScale account. Create one at [app.communityscale.io/sign-up]
 
 ### Claude (web and desktop)
 
-1. Open [connector settings](https://claude.ai/settings/connectors) and select **Add custom connector**.
-2. Name it `CommunityScale` and paste `https://api.communityscale.io/mcp/v1` as the URL.
-3. Select **Connect** and sign in.
+[claude.ai/directory/communityscale](https://claude.ai/directory/communityscale)
 
 ### Claude Code
 
-Install the plugin. It adds the connection and a skill that teaches Claude how to answer with this data:
+If you sign in to Claude Code with your Claude account, a connector you added in Claude is already available; run `/mcp` to see it. Or install the plugin, which adds the connection and a skill that teaches Claude how to answer with this data:
 
 ```text
 /plugin marketplace add CommunityScale/communityscale-mcp-public
