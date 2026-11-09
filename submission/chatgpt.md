@@ -14,7 +14,7 @@ python chatgpt/build_zip.py https://YOUR-DEMO-VIDEO-LINK
 
 ## Submit
 
-1. In the Plugins dashboard, select **Upload new or existing plugin**, choose the verified identity and upload `dist/communityscale-chatgpt-plugin.zip`. If `Research` is rejected as the category, choose the closest one offered.
+1. In the Plugins dashboard, select **Upload new or existing plugin**, choose the verified identity and upload `dist/communityscale-chatgpt-plugin.zip`. The category is `Data & Analytics`, one the dashboard accepts; `Research` is not.
 2. Under **MCPs**, select **Connect**. If validation rejects the `extensions` block in `chatgpt/mcp.json`, remove it and rebuild.
 3. Complete domain verification with the token OpenAI provides.
 4. Authorize with the reviewer account.

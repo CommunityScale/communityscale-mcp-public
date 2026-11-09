@@ -9,7 +9,7 @@
     "com.openai": {
       "interface": {
         "capabilities": [],
-        "category": "Research",
+        "category": "Data & Analytics",
         "composerIcon": "./assets/logo.png",
         "defaultPrompt": [
           "How many homes does Worcester, Massachusetts need to add, and what drives that number?",
