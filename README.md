@@ -188,7 +188,7 @@ Every tool is read-only. The full reference is at [docs.communityscale.io/docs/m
 
 ## Privacy
 
-For each request the server records your IP address, a one-way fingerprint of your sign-in token, which tool ran, whether it succeeded and how long it took. It does not record your prompts, your conversations, the arguments a tool received or the results it returned. See the [privacy policy](https://communityscale.com/privacy-policy/).
+For each tool call the server collects your CommunityScale user ID, the parameters your AI assistant sends (such as a place name, dataset or query), the tool name, time, duration and outcome, your IP address and a one-way fingerprint of your sign-in token. It does not collect your prompts, your conversation history or your sign-in token, and it does not store the data the tools return. See the [privacy policy](https://communityscale.com/privacy-policy/).
 
 ## What is in this repository
 

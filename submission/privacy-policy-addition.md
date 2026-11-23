@@ -1,4 +1,4 @@
-# Privacy policy addition (draft)
+# Privacy policy addition
 
 Published on `https://communityscale.com/privacy-policy/` as section 12, AI Assistant Connections:
 
@@ -8,16 +8,22 @@ Published on `https://communityscale.com/privacy-policy/` as section 12, AI Assi
 
 You can connect an AI assistant, such as Claude or ChatGPT, to CommunityScale data through our Model Context Protocol (MCP) server at `api.communityscale.io`.
 
-*What we collect.* When you connect, you sign in with your CommunityScale account. For each request we record your IP address, a one-way fingerprint of your sign-in token, the request ID, which tool ran, whether it succeeded and how long it took. We do not record your prompts, your conversations or your sign-in token itself. When a tool fails, its error log can include the place or dataset it was asked about.
+*Information we collect.* When you connect, you sign in with your CommunityScale account. We collect:
 
-*Why we collect it.* We use this information to keep the service secure and reliable, to apply rate limits and to understand which tools are used.
+- Account data: your CommunityScale user ID and the client ID of the AI assistant you connect.
+- Tool request data: the parameters your AI assistant sends when it calls a tool, such as a place name, dataset or query.
+- Log data: for each tool call, the tool name, time, duration and outcome, your IP address and a one-way fingerprint of your sign-in token.
 
-*Who receives it.* Clerk provides sign-in and holds your account details. Fly.io hosts the server and its logs. Cloudflare carries traffic to the service. The AI assistant you connect is operated by its own provider under its own terms, and it receives the results of the tools it calls.
+We do not collect your prompts, your conversation history or your sign-in token, and we do not store the data the tools return.
 
-*How long we keep it.* We keep request logs for about 7 days and aggregate usage counts, which identify no one, for about 15 days.
+*How we use it.* We use this information to provide the service, apply rate limits, maintain its security and reliability, troubleshoot errors and understand how the tools are used. We do not use it for advertising or to train AI models.
+
+*Who receives it.* Clerk provides sign-in and holds your account details. Fly.io hosts the server. Google Cloud stores our tool call logs. Cloudflare carries traffic to the service. Your AI assistant is operated by its provider under its own terms and receives the results of the tools it calls.
+
+*How long we keep it.* We retain this information for as long as necessary for the purposes described in this section.
 
 *Your choices.* You can disconnect CommunityScale at any time in your AI assistant's settings. To delete your account or ask about your information, contact us at the address below.
 
 *Data the tools return.* The tools return published statistics and our analysis. Nothing you send through them changes that data.
 
-**Effective date:** November 3, 2026
+**Effective date:** November 23, 2026
