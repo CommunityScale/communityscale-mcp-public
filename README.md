@@ -37,6 +37,10 @@ Then run `/mcp` in Claude Code and sign in.
 
 ### ChatGPT
 
+[CommunityScale in ChatGPT's plugin directory](https://chatgpt.com/plugins/plugin_asdk_app_6af1e5154d8081919ee687c0781b2543)
+
+Or add the server yourself:
+
 1. Open [chatgpt.com/plugins](https://chatgpt.com/plugins), select the plus button, then **Add custom MCP server**.
 2. Name it `CommunityScale`, paste `https://api.communityscale.io/mcp/v1` as the URL and choose OAuth.
 3. Select **Create as a plugin** and sign in.
